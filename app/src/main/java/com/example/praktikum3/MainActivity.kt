@@ -12,7 +12,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            // Nama Tema Anda (kemungkinan Praktikum3Theme)
+
             Praktikum3Theme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
