@@ -17,7 +17,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    // MENGGANTI "Greeting("Android")" DENGAN FUNGSI ANDA
+
                     ActivitasPertama(modifier = Modifier)
                 }
             }
