@@ -1,4 +1,7 @@
-package com.example.praktikum3
+package com.example.praktikum3 // Pastikan package ini sesuai
+
+// Import dari kode yang Anda berikan
+import android.widget.Space
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -21,15 +24,19 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+// --- IMPORT BARU UNTUK RATA TENGAH ---
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+// Import R dari project Anda
 import com.example.praktikum3.R
 
 @Composable
 fun ActivitasPertama(modifier: Modifier){
     Column (modifier = Modifier
         .padding(top = 100.dp)
-        .fillMaxSize(),
+        .fillMaxSize()
+        .padding(bottom = 16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ){
         Text(
@@ -37,10 +44,19 @@ fun ActivitasPertama(modifier: Modifier){
             fontSize = 32.sp,
             fontWeight = FontWeight.Bold
         )
+
+        // --- 1. SPACER BARU DITAMBAHKAN ---
+        Spacer(modifier = Modifier.height(height = 8.dp)) // Jarak antara prodi dan univ
+
         Text(text = stringResource(id = R.string.univ),
-            fontSize = 22.sp
+            fontSize = 22.sp,
+            // --- 2. DIBUAT RATA TENGAH ---
+            textAlign = TextAlign.Center
         )
-        Spacer(modifier = Modifier.height(height = 25.dp))
+
+        // --- 3. JARAK KE CARD DISESUAIKAN ---
+        Spacer(modifier = Modifier.height(height = 30.dp)) // Jarak dari univ ke card
+
         Card (
             modifier = Modifier
                 .fillMaxWidth(fraction = 1f)
@@ -59,6 +75,7 @@ fun ActivitasPertama(modifier: Modifier){
                         .padding(all = 5.dp)
                 )
                 Spacer(modifier = Modifier.width(width = 30.dp))
+
                 Column (){
                     Text(text = stringResource(id = R.string.nama),
                         fontSize = 30.sp,
@@ -66,9 +83,20 @@ fun ActivitasPertama(modifier: Modifier){
                         color = Color.White,
                         modifier = Modifier.padding(top = 15.dp)
                     )
+                    Text(text = stringResource(id = R.string.alamat),
+                        fontSize = 16.sp,
+                        color = Color.White
+                    )
                 }
             }
         }
+
+        // Spacer untuk mendorong copyright ke bawah
+        Spacer(Modifier.weight(1f))
+
+        Text(
+            text = stringResource(id = R.string.copy),
+            fontSize = 14.sp
+        )
     }
 }
-
