@@ -24,7 +24,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-// --- IMPORT BARU UNTUK RATA TENGAH ---
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -45,18 +44,16 @@ fun ActivitasPertama(modifier: Modifier){
             fontWeight = FontWeight.Bold
         )
 
-        // --- 1. SPACER BARU DITAMBAHKAN ---
-        Spacer(modifier = Modifier.height(height = 8.dp)) // Jarak antara prodi dan univ
+        Spacer(modifier = Modifier.height(height = 8.dp))
 
         Text(text = stringResource(id = R.string.univ),
             fontSize = 22.sp,
-            // --- 2. DIBUAT RATA TENGAH ---
             textAlign = TextAlign.Center
         )
 
-        // --- 3. JARAK KE CARD DISESUAIKAN ---
-        Spacer(modifier = Modifier.height(height = 30.dp)) // Jarak dari univ ke card
+        Spacer(modifier = Modifier.height(height = 30.dp))
 
+        // --- CARD 1 (ABU-ABU / BAWAAN ANDA) ---
         Card (
             modifier = Modifier
                 .fillMaxWidth(fraction = 1f)
@@ -82,6 +79,92 @@ fun ActivitasPertama(modifier: Modifier){
                         fontFamily = FontFamily.Cursive,
                         color = Color.White,
                         modifier = Modifier.padding(top = 15.dp)
+                    )
+                    Text(text = stringResource(id = R.string.alamat),
+                        fontSize = 16.sp,
+                        color = Color.White
+                    )
+                }
+            }
+        }
+
+        // --- CARD 2 (BIRU) BARU ---
+        Card (
+            modifier = Modifier
+                .fillMaxWidth(fraction = 1f)
+                .padding(all = 12.dp),
+            colors = CardDefaults.cardColors(
+                containerColor = Color(0xFF0D47A1) // Biru tua
+            )
+        ){
+            Row (
+                modifier = Modifier.padding(all = 8.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ){
+                val gambarLogo = painterResource(id = R.drawable.bakwan)
+                Image(
+                    painter = gambarLogo,
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(size = 100.dp)
+                        .padding(all = 5.dp)
+                )
+                Spacer(modifier = Modifier.width(width = 16.dp))
+
+                Column (){
+                    // --- STYLE NAMA DISAMAKAN SEPERTI CARD 1 ---
+                    Text(text = stringResource(id = R.string.nama),
+                        fontSize = 30.sp,
+                        fontFamily = FontFamily.Cursive,
+                        color = Color.White,
+                        modifier = Modifier.padding(top = 15.dp)
+                    )
+                    Text(text = stringResource(id = R.string.nim),
+                        fontSize = 16.sp,
+                        color = Color.White
+                    )
+                    Text(text = stringResource(id = R.string.alamat),
+                        fontSize = 16.sp,
+                        color = Color.White
+                    )
+                }
+            }
+        }
+
+        // --- CARD 3 (MERAH) BARU ---
+        Card (
+            modifier = Modifier
+                .fillMaxWidth(fraction = 1f)
+                .padding(all = 12.dp),
+            colors = CardDefaults.cardColors(
+                containerColor = Color(0xFFB71C1C) // Merah tua
+            )
+        ){
+            Row (
+                modifier = Modifier.padding(all = 8.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ){
+                val gambarLogo = painterResource(id = R.drawable.bakwan)
+                Image(
+                    painter = gambarLogo,
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(size = 100.dp)
+                        .padding(all = 5.dp)
+                )
+                Spacer(modifier = Modifier.width(width = 16.dp))
+
+                Column (){
+                    // --- STYLE NAMA DISAMAKAN SEPERTI CARD 1 ---
+                    Text(text = stringResource(id = R.string.nama),
+                        fontSize = 30.sp,
+                        fontFamily = FontFamily.Cursive,
+                        color = Color.White,
+                        modifier = Modifier.padding(top = 15.dp)
+                    )
+                    Text(text = stringResource(id = R.string.nim),
+                        fontSize = 16.sp,
+                        color = Color.White
                     )
                     Text(text = stringResource(id = R.string.alamat),
                         fontSize = 16.sp,
