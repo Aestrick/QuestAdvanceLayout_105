@@ -1,4 +1,4 @@
-package com.example.praktikum3 // Package Anda dari screenshot
+package com.example.praktikum3
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
