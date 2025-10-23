@@ -26,7 +26,7 @@ import androidx.compose.ui.unit.sp
 import com.example.praktikum3.R
 
 @Composable
-fun ActivitasPertama(modifier: Modifier){ // Sesuai dengan kode Anda
+fun ActivitasPertama(modifier: Modifier){
     Column (modifier = Modifier
         .padding(top = 100.dp)
         .fillMaxSize(),
